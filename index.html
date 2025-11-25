@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health care</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Yeseva+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style id="sections-styles">
+.site-header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  .secondary-nav {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-logo);
+    height: 100px;
+    display: flex;
+    align-items: center;
+  }
+
+  .secondary-nav__container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .site-logo--secondary a {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: var(--color-text-logo);
+  }
+
+  .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .user-actions__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+  }
+
+  .main-nav {
+    background-color: var(--color-primary-light);
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-nav__container ul {
+    display: flex;
+    gap: 40px;
+  }
+
+  .main-nav__container a {
+    color: var(--color-text-light);
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .main-nav__container a.active {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 1440px) {
+    .secondary-nav__container {
+      padding: 0 60px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .main-nav__container ul {
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .main-nav {
+      height: auto;
+      padding: 10px 0;
+    }
+    .site-header {
+      position: relative;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .secondary-nav__container {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px 20px;
+    }
+    .secondary-nav {
+      height: auto;
+    }
+    .user-actions {
+      gap: 16px;
+    }
+    .main-nav__container ul {
+      font-size: 14px;
+    }
+  }
+
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 1265px;
+    background: linear-gradient(180deg, #13232e 1.94%, rgba(33, 81, 101, 0.7) 28.72%, rgba(255, 255, 255, 0.2) 94.52%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 158px;
+    overflow: hidden;
+  }
+
+  .hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero-bg-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--color-text-light);
+    padding: 160px 20px 60px;
+    max-width: 950px;
+  }
+
+  .hero-content h1 {
+    font-size: 56px;
+    line-height: 1.25;
+    margin-bottom: 15px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 42px;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    padding: 16px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .hero-image-container {
+    position: relative;
+    z-index: 2;
+    margin-top: 48px;
+    width: 799px;
+    height: 592px;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .hero-card {
+    position: absolute;
+    background-color: rgba(217, 217, 217, 0.35);
+    backdrop-filter: blur(2px);
+    border-radius: 48.5px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--color-primary);
+  }
+
+  .hero-card__value {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .hero-card__label {
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: 0.8px;
+  }
+
+  .card-1 { top: 346px; left: -127px; }
+  .card-2 { top: 271px; right: -122px; }
+  .card-3 { top: 420px; right: -194px; }
+
+  @media (max-width: 1200px) {
+    .hero-card {
+      transform: scale(0.8);
+    }
+    .card-1 { top: 300px; left: -50px; }
+    .card-2 { top: 220px; right: -50px; }
+    .card-3 { top: 400px; right: -100px; }
+  }
+
+  @media (max-width: 1024px) {
+    .hero-section {
+      padding-top: 40px;
+      min-height: auto;
+    }
+    .hero-content {
+      padding-top: 60px;
+    }
+    .hero-image-container {
+      width: 90%;
+      height: auto;
+    }
+    .hero-card {
+      position: static;
+      margin: 10px auto;
+      width: fit-content;
+    }
+    .hero-image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 40px;
+    }
+  }
+.why-beyond-section {
+    background-color: var(--color-bg-light);
+    padding: 120px 240px;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .section-header h2 {
+    font-size: 48px;
+    line-height: 1.25;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+  }
+
+  .section-header p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .why-beyond-content {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .why-beyond-image-card {
+    position: relative;
+    flex-basis: 459px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .why-beyond-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 32px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 54.59%);
+  }
+
+  .image-overlay-text h3 {
+    font-size: 24px;
+    line-height: 1.25;
+    color: var(--color-text-light);
+  }
+
+  .why-beyond-features-grid {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .feature-card {
+    background-color: var(--color-bg-light);
+    box-shadow: 0px 2px 80px 10px rgba(128, 162, 175, 0.16);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .feature-card img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .feature-card h4 {
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--color-primary-dark);
+    letter-spacing: 0.72px;
+  }
+
+  @media (max-width: 1440px) {
+    .why-beyond-section {
+      padding: 80px 120px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .why-beyond-section {
+      padding: 60px;
+    }
+    .why-beyond-content {
+      flex-direction: column;
+    }
+    .why-beyond-image-card {
+      flex-basis: 300px;
+    }
+    .why-beyond-features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .why-beyond-section {
+      padding: 40px 20px;
+    }
+    .why-beyond-features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.testimonials-section {
+    background-color: var(--color-bg-section);
+    padding: 155px 0;
+    overflow: hidden;
+  }
+
+  .testimonials-container {
+    display: flex;
+    gap: 145px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 100px;
+  }
+
+  .testimonials-gallery {
+    flex: 1;
+    position: relative;
+    min-height: 584px;
+  }
+
+  .testimonials-bg {
+    position: absolute;
+    width: 458px;
+    height: 501px;
+    background-color: rgba(198, 194, 179, 0.2);
+    border-radius: 12px;
+    top: 50px;
+    left: 123px;
+  }
+
+  .quote-icon {
+    position: absolute;
+    top: 29px;
+    right: -65px;
+  }
+
+  .testimonial-card {
+    position: absolute;
+    background-color: var(--color-bg-light);
+    box-shadow: 0px 2px 80px 10px rgba(128, 162, 175, 0.16);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .testimonial-card img {
+    width: 68px;
+    height: 68px;
+    flex-shrink: 0;
+  }
+
+  .testimonial-card-text h5 {
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--color-primary-dark);
+    margin-bottom: 8px;
+  }
+
+  .testimonial-card-text p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+  }
+
+  .card-annette { top: 0; left: 0; width: 493px; }
+  .card-john { top: 161px; left: 211px; width: 493px; }
+  .card-kathryn { top: 322px; left: 0; width: 493px; }
+  .card-leslie { top: 483px; left: 211px; width: 493px; }
+
+  .testimonials-content {
+    flex: 1;
+  }
+
+  .testimonials-content h2 {
+    font-size: 48px;
+    line-height: 1.25;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+  }
+
+  .testimonials-content .subtitle {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    margin-bottom: 58px;
+  }
+
+  .testimonial-points {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .testimonial-point {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .testimonial-point img {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .testimonial-point h5 {
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+  }
+
+  .testimonial-point p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 1440px) {
+    .testimonials-container {
+      padding: 0 120px;
+      gap: 60px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .testimonials-container {
+      flex-direction: column;
+      padding: 0 60px;
+    }
+    .testimonials-gallery {
+      min-height: 400px;
+      transform: scale(0.8);
+      transform-origin: top left;
+      margin-bottom: -100px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .testimonials-section {
+      padding: 60px 0;
+    }
+    .testimonials-container {
+      padding: 0 20px;
+    }
+    .testimonials-gallery {
+      display: none; 
+    }
+  }
+
+.testing-section {
+    background-color: var(--color-bg-light);
+    padding: 154px 0;
+  }
+
+  .testing-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 240px;
+    display: flex;
+    align-items: center;
+    gap: 156px;
+  }
+
+  .testing-text {
+    flex: 1;
+    max-width: 702px;
+  }
+
+  .testing-text h2 {
+    font-size: 48px;
+    line-height: 1.25;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+  }
+
+  .testing-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-primary);
+    margin-bottom: 24px;
+  }
+
+  .testing-image {
+    flex: 1;
+    max-width: 582px;
+  }
+
+  .testing-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    background-color: rgba(54, 104, 128, 0.2);
+  }
+  
+  @media (max-width: 1440px) {
+    .testing-container {
+      padding: 0 120px;
+      gap: 60px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .testing-section {
+      padding: 80px 0;
+    }
+    .testing-container {
+      flex-direction: column-reverse;
+      padding: 0 60px;
+    }
+    .testing-text {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .testing-container {
+      padding: 0 20px;
+    }
+  }
+
+.treatments-section {
+    background-color: var(--color-bg-section);
+    padding: 120px 0;
+  }
+
+  .treatments-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 240px;
+    display: flex;
+    align-items: center;
+    gap: 163px;
+  }
+
+  .treatments-gallery {
+    position: relative;
+    width: 696px;
+    height: 744px;
+    flex-shrink: 0;
+  }
+
+  .treatments-gallery img {
+    position: absolute;
+    width: 336px;
+    height: 348px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .gallery-img-1 { top: 0; left: 0; }
+  .gallery-img-2 { top: 24px; left: 360px; }
+  .gallery-img-3 { top: 372px; left: 0; }
+  .gallery-img-4 { top: 396px; left: 360px; }
+
+  .treatments-content {
+    flex: 1;
+    max-width: 581px;
+  }
+
+  .treatments-content h2 {
+    font-size: 48px;
+    line-height: 1.25;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+  }
+
+  .treatments-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    margin-bottom: 48px;
+  }
+
+  .treatment-search-form {
+    position: relative;
+    width: 100%;
+  }
+
+  .treatment-search-form input {
+    width: 100%;
+    height: 64px;
+    border-radius: 37.5px;
+    border: none;
+    background-color: rgba(128, 162, 175, 0.1);
+    padding: 0 70px 0 20px;
+    font-size: 16px;
+    color: var(--color-primary-light);
+  }
+  
+  .treatment-search-form input::placeholder {
+    color: var(--color-primary-light);
+  }
+
+  .treatment-search-form button {
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(301deg, #80a2af 0%, #356880 93.7%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (max-width: 1440px) {
+    .treatments-container {
+      padding: 0 120px;
+      gap: 60px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .treatments-container {
+      flex-direction: column;
+      padding: 0 60px;
+    }
+    .treatments-gallery {
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      position: static;
+    }
+    .treatments-gallery img {
+      position: static;
+      width: 100%;
+      height: auto;
+    }
+    .treatment-search-form {
+    /* position: relative; */
+    width: 75%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .treatments-container {
+      padding: 0 20px;
+    }
+    .treatments-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.site-footer-main {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 48px 0;
+  }
+
+  .footer-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 240px;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 48px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .site-logo--footer a {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: var(--color-text-logo);
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: 32px;
+    font-size: 18px;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 12px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 243px;
+    font-size: 16px;
+  }
+
+  .copyright {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  @media (max-width: 1440px) {
+    .footer-container {
+      padding: 0 120px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .footer-container {
+      padding: 0 60px;
+      width: 100%;
+    }
+    .footer-top {
+      flex-direction: column;
+      gap: 30px;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      padding: 0 20px;
+    }
+    .footer-nav {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+  }
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="secondary-nav">
+    <div class="secondary-nav__container">
+      <div class="social-icons">
+        <a href="#"><img src="images/I1_248_47_1365.svg" alt="Facebook"></a>
+        <a href="#"><img src="images/I1_248_47_1367.svg" alt="Instagram"></a>
+        <a href="#"><img src="images/I1_248_47_1362.svg" alt="Twitter"></a>
+      </div>
+      <div class="site-logo site-logo--secondary">
+        <a href="#">LOGO</a>
+      </div>
+      <div class="user-actions">
+        <a href="#" class="user-actions__link">
+          <img src="images/I1_260_129_15014.svg" alt="Search Icon">
+          <span>Search</span>
+        </a>
+        <a href="#" class="user-actions__link">
+          <img src="images/I1_263_129_15056.svg" alt="Login Icon">
+          <span>Login</span>
+        </a>
+        <a href="#" class="user-actions__link">
+          <img src="images/I1_266_66_1910.svg" alt="Basket Icon">
+          <span>Basket</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="main-nav">
+    <nav class="main-nav__container">
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#treatments">Treatments</a></li>
+        <li><a href="#">Health Checks</a></li>
+        <li><a href="#">Supplements</a></li>
+        <li><a href="#">Advice Centre</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="hero" class="hero-section">
+  <div class="hero-bg-overlay">
+    <img src="images/1_101.svg" alt="background pattern">
+  </div>
+  <div class="hero-content">
+    <h1>Improving Health Tech, Extending Life</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <a href="#" class="cta-button">
+      <span>Book an appointment</span>
+      <img src="images/I1_105_28_24740_129_15143.svg" alt="arrow icon">
+    </a>
+  </div>
+  <div class="hero-image-container">
+    <img src="images/80eed114feeccff923763bd2e1f043c27a03da5b.png" alt="Two medical professionals smiling" class="hero-image">
+    <div class="hero-card card-1">
+      <span class="hero-card__value">80%</span>
+      <span class="hero-card__label">Positive<br>Feedback</span>
+    </div>
+    <div class="hero-card card-2">
+      <span class="hero-card__value">150k</span>
+      <span class="hero-card__label">Patients<br>Recovered</span>
+    </div>
+    <div class="hero-card card-3">
+      <span class="hero-card__value">50+</span>
+      <span class="hero-card__label">Experienced<br>Doctors</span>
+    </div>
+  </div>
+</section>
+<section id="why-beyond" class="why-beyond-section">
+  <div class="section-header">
+    <h2>Why Beyond</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+  </div>
+  <div class="why-beyond-content">
+    <div class="why-beyond-image-card">
+      <img src="images/54b1d88659dd2b9f4d42ce9fe296cc1ee1b97403.png" alt="Remote health management setup">
+      <div class="image-overlay-text">
+        <h3>Remote Health Management</h3>
+      </div>
+    </div>
+    <div class="why-beyond-features-grid">
+      <div class="feature-card">
+        <img src="images/I1_118_56_408.svg" alt="AI Consultation Icon">
+        <h4>AI Consultation</h4>
+      </div>
+      <div class="feature-card">
+        <img src="images/I1_138_56_408.svg" alt="24/7 Support Icon">
+        <h4>24/7 Support</h4>
+      </div>
+      <div class="feature-card">
+        <img src="images/I1_143_56_408.svg" alt="Easy Appointment Booking Icon">
+        <h4>Easy Appointment<br>Booking</h4>
+      </div>
+      <div class="feature-card">
+        <img src="images/I1_123_56_408.svg" alt="Integrated Health Records Icon">
+        <h4>Integrated Health Records</h4>
+      </div>
+      <div class="feature-card">
+        <img src="images/I1_128_56_408.svg" alt="Cost Effective Icon">
+        <h4>Cost Effective</h4>
+      </div>
+      <div class="feature-card">
+        <img src="images/I1_133_56_408.svg" alt="Well Care Icon">
+        <h4>Well Care</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="testimonials" class="testimonials-section">
+  <div class="testimonials-container">
+    <div class="testimonials-gallery">
+      <div class="testimonials-bg"></div>
+      <img src="images/1_197.svg" alt="quote icon" class="quote-icon">
+      <div class="testimonial-card card-annette">
+        <img src="images/1_172.svg" alt="Annette Black">
+        <div class="testimonial-card-text">
+          <h5>Annette Black</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+        </div>
+      </div>
+      <div class="testimonial-card card-john">
+        <img src="images/1_186.svg" alt="John Chris">
+        <div class="testimonial-card-text">
+          <h5>John Chris</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+        </div>
+      </div>
+      <div class="testimonial-card card-kathryn">
+        <img src="images/1_179.svg" alt="Kathryn Murphy">
+        <div class="testimonial-card-text">
+          <h5>Kathryn Murphy</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+        </div>
+      </div>
+      <div class="testimonial-card card-leslie">
+        <img src="images/1_193.svg" alt="Leslie Alexander">
+        <div class="testimonial-card-text">
+          <h5>Leslie Alexander</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-content">
+      <h2>Testimonials</h2>
+      <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <div class="testimonial-points">
+        <div class="testimonial-point">
+          <img src="images/I1_154_31_1539.svg" alt="icon">
+          <div>
+            <h5>What Our Client Says</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. , consectetur adipiscing elit</p>
+          </div>
+        </div>
+        <div class="testimonial-point">
+          <img src="images/I1_159_31_1469.svg" alt="icon">
+          <div>
+            <h5>Real Stories from our Happy Families</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. , consectetur adipiscing elit</p>
+          </div>
+        </div>
+        <div class="testimonial-point">
+          <img src="images/I1_164_31_1561.svg" alt="icon">
+          <div>
+            <h5>Why People Trust Us</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. , consectetur adipiscing elit</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="testing" class="testing-section">
+  <div class="testing-container">
+    <div class="testing-text">
+      <h2>Testing</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,</p>
+    </div>
+    <div class="testing-image">
+      <img src="images/2b05fea619f6fdc48b9534d949f313eea6807254.png" alt="Smiling female doctor">
+    </div>
+  </div>
+</section>
+<section id="treatments" class="treatments-section">
+  <div class="treatments-container">
+    <div class="treatments-gallery">
+      <img src="images/2acaf63e2a9aeaba0385731eeac23e14d5948678.png" alt="Treatment image 1" class="gallery-img-1">
+      <img src="images/82bfb97706aa65df8e64c8a7d7795abe1a829969.png" alt="Treatment image 2" class="gallery-img-2">
+      <img src="images/bbbeac391982461a80dc611a97d13b619e570b59.png" alt="Treatment image 3" class="gallery-img-3">
+      <img src="images/8ba4061bf233cecc39c28473109f10d3c0521fb6.png" alt="Treatment image 4" class="gallery-img-4">
+    </div>
+    <div class="treatments-content">
+      <h2>Treatments</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <form class="treatment-search-form">
+        <input type="text" placeholder="Find a treatment by personal requirements...">
+        <button type="submit">
+          <img src="images/I1_219_129_15014.svg" alt="Search">
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+<footer class="site-footer-main">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="site-logo site-logo--footer">
+        <a href="#">LOGO</a>
+      </div>
+      <nav class="footer-nav">
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Privacy Policy</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#"><img src="images/I1_237_47_1365.svg" alt="Facebook"></a>
+        <a href="#"><img src="images/I1_237_47_1367.svg" alt="Instagram"></a>
+        <a href="#"><img src="images/I1_237_47_1362.svg" alt="Twitter"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="copyright">
+        <img src="images/1_226.svg" alt="copyright icon">
+        <span>2025 Health Tech</span>
+      </div>
+      <div class="credits">
+        <span>Website designed by Aleena</span>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

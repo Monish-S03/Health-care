@@ -1,0 +1,15 @@
+<svg width="988" height="526" viewBox="0 0 988 526" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group">
+<path id="Vector" style="mix-blend-mode:screen" d="M-8.06812e-06 504.936C22.019 479.311 167.965 315.237 429.605 295.165C647.41 278.452 862.155 367.923 987.577 526L987.79 -6.49834e-06L0.204345 0.275423L-8.06812e-06 504.936Z" fill="url(#paint0_radial_1_101)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_1_101" cx="0" cy="0" r="1" gradientTransform="matrix(0.139423 -344.358 414.862 -0.115729 464.367 368.592)" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="0.15" stop-color="#D3D3D3"/>
+<stop offset="0.46" stop-color="#797979"/>
+<stop offset="0.72" stop-color="#383838"/>
+<stop offset="0.9" stop-color="#0F0F0F"/>
+<stop offset="1"/>
+</radialGradient>
+</defs>
+</svg>
